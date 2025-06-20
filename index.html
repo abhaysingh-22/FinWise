@@ -1,0 +1,1174 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>FinWise</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style>
+      .spa-page {
+        display: none;
+      }
+      .spa-page.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- SPA Navigation -->
+    <nav class="flex gap-4 p-4 border-b border-gray-200">
+      <a href="#" class="spa-nav" data-page="dashboard">Dashboard</a>
+      <a href="#" class="spa-nav" data-page="transactions">Transactions</a>
+      <a href="#" class="spa-nav" data-page="budget">Budget Planner</a>
+      <a href="#" class="spa-nav" data-page="profile">Profile</a>
+    </nav>
+
+    <!-- Dashboard Page -->
+    <div id="dashboard" class="spa-page active">
+      <div
+        class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden"
+        style="font-family: Inter, 'Noto Sans', sans-serif"
+      >
+        <div class="layout-container flex h-full grow flex-col">
+          <header
+            class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f5] px-10 py-3"
+          >
+            <div class="flex items-center gap-4 text-[#111418]">
+              <div class="size-4">
+                <svg
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 6H42L36 24L42 42H6L12 24L6 6Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
+              <h2
+                class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]"
+              >
+                FinWise
+              </h2>
+            </div>
+            <div class="flex flex-1 justify-end gap-8">
+              <div class="flex items-center gap-9">
+                <a
+                  class="text-[#111418] text-sm font-medium leading-normal"
+                  href="dashboard.html"
+                  >Dashboard</a
+                >
+                <a
+                  class="text-[#111418] text-sm font-medium leading-normal"
+                  href="transactions.html"
+                  >Transactions</a
+                >
+                <a
+                  class="text-[#111418] text-sm font-medium leading-normal"
+                  href="budget.html"
+                  >Budget</a
+                >
+                <a
+                  class="text-[#111418] text-sm font-medium leading-normal"
+                  href="#"
+                  >Goals</a
+                >
+                <a
+                  class="text-[#111418] text-sm font-medium leading-normal"
+                  href="#"
+                  >Investments</a
+                >
+              </div>
+              <button
+                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#f0f2f5] text-[#111418] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+              >
+                <div
+                  class="text-[#111418]"
+                  data-icon="Bell"
+                  data-size="20px"
+                  data-weight="regular"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20px"
+                    height="20px"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"
+                    ></path>
+                  </svg>
+                </div>
+              </button>
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDsEm26e2y5-54M5RnXo__ZH-KfY_IiSk_NtZ90Ht58AhRlZJrM90hsEaKXZKU7G7c6kcBWtmBb2mx5zVIJHn5CotCm4BqAm2FArmUnZtrO33GgRFq6XcL5D5u-69UwNKl46K51vpI2JM2Ael6q5zu8zHhivXfL8lOp4oajfZfoI6DZP1eBP_psAHtOMiB7dKB-LxApWE2PBTaH-LjsaXyx88G4NfkhD3LU4caw32XdJFD9Fl7Z6ROV7LkDSDiTwxxWq7ldo1gcpPA');
+                "
+              ></div>
+            </div>
+          </header>
+          <div class="px-40 flex flex-1 justify-center py-5">
+            <div
+              class="layout-content-container flex flex-col max-w-[960px] flex-1"
+            >
+              <div class="flex flex-wrap justify-between gap-3 p-4">
+                <p
+                  class="text-[#111418] tracking-light text-[32px] font-bold leading-tight min-w-72"
+                >
+                  Welcome back, Sarah
+                </p>
+              </div>
+              <h2
+                class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5"
+              >
+                Accounts
+              </h2>
+              <div
+                class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden"
+              >
+                <div class="flex items-stretch p-4 gap-3">
+                  <div
+                    class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40"
+                  >
+                    <div
+                      class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col"
+                      style="
+                        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAZCWti6SuNDsqsnfH-wrNcx3z3UZwBWNKP737HBc8kFO1oj5om_sedEbj34z_Ruf3OTjbDhuEmj82-dt6BMaaBkHwGRgYbfbiPd1145_NjguJuTps-LlnAfme1w7Ycl8qRDCl7LFTCyybb3VEoFC-Ci-ga8QatNkFjSz4bJHXKvumUIhLTpISUWE2UPaUe_1K1gxJsyJGz8Vzpi72WWsvu2os17pi6Fml8BeULFjjscIBeiNo0V2NC6XSOiSc91J7-BUdjL8ElgJo');
+                      "
+                    ></div>
+                    <div>
+                      <p
+                        class="text-[#111418] text-base font-medium leading-normal"
+                      >
+                        Checking
+                      </p>
+                      <p
+                        class="text-[#60758a] text-sm font-normal leading-normal"
+                      >
+                        $5,234.56
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40"
+                  >
+                    <div
+                      class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col"
+                      style="
+                        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA_hZ1U72kOtAvGMKXicm-5CXvJyAyPqEorBd5wZPOz1a45Csbmr1Ifxsnl0Flm08Yn7sElVEn1Qkzv6r7-E8-pzWDixb3kULsphbUHIFyepww8hbqy882wQlXsKjwRuf1J6ypGyXT9UdoZ5dICRYZPbRtcf-_ltClM-nZ1_VLuxVuazQhDXPFOnPgauiBn6dC5pMgegTuWtAWA8_onWID80WXqbWkh8huGZD0XJ79rjG6hWP7q_bwptOcMWsJIv5LVcnTsf1yZWP4');
+                      "
+                    ></div>
+                    <div>
+                      <p
+                        class="text-[#111418] text-base font-medium leading-normal"
+                      >
+                        Credit Card
+                      </p>
+                      <p
+                        class="text-[#60758a] text-sm font-normal leading-normal"
+                      >
+                        $1,234.56
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40"
+                  >
+                    <div
+                      class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col"
+                      style="
+                        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCCrZUPJck3w28so4wTrP4NlU6b4n9NEL48_BmMZCRHjIqQKO8xzGmIGrtEFnNhAJUh9HkaAZgNvBlWRpVOH75ISAqp9X6Go2S7BtXEZ-s9dzQsEvzW1f6SFq1K1ihgXqGUntBEKDVnvoPFSdu5xKmy0z0jxtNEuNCHBgZIzS1KFIn4EVnuSlDP6Y4CPMu5J-pbrDPKosrZdtrVEXXzjFKEUezUbSzfhTkr4NY3fOeGGlSQxfzi0tNWE2UsPbVIiVI3KjMWInBKM4U');
+                      "
+                    ></div>
+                    <div>
+                      <p
+                        class="text-[#111418] text-base font-medium leading-normal"
+                      >
+                        Investments
+                      </p>
+                      <p
+                        class="text-[#60758a] text-sm font-normal leading-normal"
+                      >
+                        $10,234.56
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2
+                class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5"
+              >
+                Recent Transactions
+              </h2>
+              <div class="px-4 py-3 @container">
+                <div
+                  class="flex overflow-hidden rounded-lg border border-[#dbe0e6] bg-white"
+                >
+                  <table class="flex-1">
+                    <thead>
+                      <tr class="bg-white">
+                        <th
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-120 px-4 py-3 text-left text-[#111418] w-[400px] text-sm font-medium leading-normal"
+                        >
+                          Date
+                        </th>
+                        <th
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-240 px-4 py-3 text-left text-[#111418] w-[400px] text-sm font-medium leading-normal"
+                        >
+                          Description
+                        </th>
+                        <th
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-360 px-4 py-3 text-left text-[#111418] w-60 text-sm font-medium leading-normal"
+                        >
+                          Category
+                        </th>
+                        <th
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-480 px-4 py-3 text-left text-[#111418] w-[400px] text-sm font-medium leading-normal"
+                        >
+                          Amount
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="border-t border-t-[#dbe0e6]">
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-120 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          2023-08-15
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-240 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          Grocery Store
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-360 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal"
+                        >
+                          <button
+                            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f0f2f5] text-[#111418] text-sm font-medium leading-normal w-full"
+                          >
+                            <span class="truncate">Groceries</span>
+                          </button>
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-480 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          -$75.00
+                        </td>
+                      </tr>
+                      <tr class="border-t border-t-[#dbe0e6]">
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-120 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          2023-08-14
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-240 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          Online Shopping
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-360 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal"
+                        >
+                          <button
+                            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f0f2f5] text-[#111418] text-sm font-medium leading-normal w-full"
+                          >
+                            <span class="truncate">Shopping</span>
+                          </button>
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-480 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          -$120.00
+                        </td>
+                      </tr>
+                      <tr class="border-t border-t-[#dbe0e6]">
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-120 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          2023-08-13
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-240 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          Salary Deposit
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-360 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal"
+                        >
+                          <button
+                            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f0f2f5] text-[#111418] text-sm font-medium leading-normal w-full"
+                          >
+                            <span class="truncate">Income</span>
+                          </button>
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-480 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          +$3,000.00
+                        </td>
+                      </tr>
+                      <tr class="border-t border-t-[#dbe0e6]">
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-120 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          2023-08-12
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-240 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          Restaurant
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-360 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal"
+                        >
+                          <button
+                            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f0f2f5] text-[#111418] text-sm font-medium leading-normal w-full"
+                          >
+                            <span class="truncate">Dining</span>
+                          </button>
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-480 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          -$50.00
+                        </td>
+                      </tr>
+                      <tr class="border-t border-t-[#dbe0e6]">
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-120 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          2023-08-11
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-240 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          Gas Station
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-360 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal"
+                        >
+                          <button
+                            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f0f2f5] text-[#111418] text-sm font-medium leading-normal w-full"
+                          >
+                            <span class="truncate">Transportation</span>
+                          </button>
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-480 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          -$40.00
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <style>
+                  @container (max-width:120px) {
+                    .table-d8245873-b324-4994-af7e-be500bcc34ba-column-120 {
+                      display: none;
+                    }
+                  }
+                  @container (max-width:240px) {
+                    .table-d8245873-b324-4994-af7e-be500bcc34ba-column-240 {
+                      display: none;
+                    }
+                  }
+                  @container (max-width:360px) {
+                    .table-d8245873-b324-4994-af7e-be500bcc34ba-column-360 {
+                      display: none;
+                    }
+                  }
+                  @container (max-width:480px) {
+                    .table-d8245873-b324-4994-af7e-be500bcc34ba-column-480 {
+                      display: none;
+                    }
+                  }
+                </style>
+              </div>
+              <h2
+                class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5"
+              >
+                Financial Metrics
+              </h2>
+              <div class="flex flex-wrap gap-4 p-4">
+                <div
+                  class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg p-6 border border-[#dbe0e6]"
+                >
+                  <p class="text-[#111418] text-base font-medium leading-normal">
+                    Net Worth
+                  </p>
+                  <p
+                    class="text-[#111418] tracking-light text-2xl font-bold leading-tight"
+                  >
+                    $15,000
+                  </p>
+                  <p class="text-[#078838] text-base font-medium leading-normal">
+                    +10%
+                  </p>
+                </div>
+                <div
+                  class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg p-6 border border-[#dbe0e6]"
+                >
+                  <p class="text-[#111418] text-base font-medium leading-normal">
+                    Spending This Month
+                  </p>
+                  <p
+                    class="text-[#111418] tracking-light text-2xl font-bold leading-tight"
+                  >
+                    $500
+                  </p>
+                  <p class="text-[#e73908] text-base font-medium leading-normal">
+                    -5%
+                  </p>
+                </div>
+                <div
+                  class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg p-6 border border-[#dbe0e6]"
+                >
+                  <p class="text-[#111418] text-base font-medium leading-normal">
+                    Savings Rate
+                  </p>
+                  <p
+                    class="text-[#111418] tracking-light text-2xl font-bold leading-tight"
+                  >
+                    20%
+                  </p>
+                  <p class="text-[#078838] text-base font-medium leading-normal">
+                    +2%
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Transactions Page -->
+    <div id="transactions" class="spa-page">
+      <div
+        class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden"
+        style="font-family: Inter, 'Noto Sans', sans-serif"
+      >
+        <div class="layout-container flex h-full grow flex-col">
+          <header
+            class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f5] px-10 py-3"
+          >
+            <div class="flex items-center gap-4 text-[#111418]">
+              <div class="size-4">
+                <svg
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 6H42L36 24L42 42H6L12 24L6 6Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
+              <h2
+                class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]"
+              >
+                FinWise
+              </h2>
+            </div>
+            <div class="flex flex-1 justify-end gap-8">
+              <div class="flex items-center gap-9">
+                <a
+                  class="text-[#111418] text-sm font-medium leading-normal"
+                  href="dashboard.html"
+                  >Dashboard</a
+                >
+                <a
+                  class="text-[#111418] text-sm font-medium leading-normal"
+                  href="transactions.html"
+                  >Transactions</a
+                >
+                <a
+                  class="text-[#111418] text-sm font-medium leading-normal"
+                  href="budget.html"
+                  >Budget</a
+                >
+                <a
+                  class="text-[#111418] text-sm font-medium leading-normal"
+                  href="#"
+                  >Goals</a
+                >
+                <a
+                  class="text-[#111418] text-sm font-medium leading-normal"
+                  href="#"
+                  >Investments</a
+                >
+              </div>
+              <button
+                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#f0f2f5] text-[#111418] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+              >
+                <div
+                  class="text-[#111418]"
+                  data-icon="Bell"
+                  data-size="20px"
+                  data-weight="regular"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20px"
+                    height="20px"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"
+                    ></path>
+                  </svg>
+                </div>
+              </button>
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDsEm26e2y5-54M5RnXo__ZH-KfY_IiSk_NtZ90Ht58AhRlZJrM90hsEaKXZKU7G7c6kcBWtmBb2mx5zVIJHn5CotCm4BqAm2FArmUnZtrO33GgRFq6XcL5D5u-69UwNKl46K51vpI2JM2Ael6q5zu8zHhivXfL8lOp4oajfZfoI6DZP1eBP_psAHtOMiB7dKB-LxApWE2PBTaH-LjsaXyx88G4NfkhD3LU4caw32XdJFD9Fl7Z6ROV7LkDSDiTwxxWq7ldo1gcpPA');
+                "
+              ></div>
+            </div>
+          </header>
+          <div class="px-40 flex flex-1 justify-center py-5">
+            <div
+              class="layout-content-container flex flex-col max-w-[960px] flex-1"
+            >
+              <div class="flex flex-wrap justify-between gap-3 p-4">
+                <p
+                  class="text-[#111418] tracking-light text-[32px] font-bold leading-tight min-w-72"
+                >
+                  Transactions
+                </p>
+              </div>
+              <h2
+                class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5"
+              >
+                Recent Transactions
+              </h2>
+              <div class="px-4 py-3 @container">
+                <div
+                  class="flex overflow-hidden rounded-lg border border-[#dbe0e6] bg-white"
+                >
+                  <table class="flex-1">
+                    <thead>
+                      <tr class="bg-white">
+                        <th
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-120 px-4 py-3 text-left text-[#111418] w-[400px] text-sm font-medium leading-normal"
+                        >
+                          Date
+                        </th>
+                        <th
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-240 px-4 py-3 text-left text-[#111418] w-[400px] text-sm font-medium leading-normal"
+                        >
+                          Description
+                        </th>
+                        <th
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-360 px-4 py-3 text-left text-[#111418] w-60 text-sm font-medium leading-normal"
+                        >
+                          Category
+                        </th>
+                        <th
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-480 px-4 py-3 text-left text-[#111418] w-[400px] text-sm font-medium leading-normal"
+                        >
+                          Amount
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="border-t border-t-[#dbe0e6]">
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-120 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          2023-08-15
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-240 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          Grocery Store
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-360 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal"
+                        >
+                          <button
+                            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f0f2f5] text-[#111418] text-sm font-medium leading-normal w-full"
+                          >
+                            <span class="truncate">Groceries</span>
+                          </button>
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-480 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          -$75.00
+                        </td>
+                      </tr>
+                      <tr class="border-t border-t-[#dbe0e6]">
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-120 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          2023-08-14
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-240 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          Online Shopping
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-360 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal"
+                        >
+                          <button
+                            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f0f2f5] text-[#111418] text-sm font-medium leading-normal w-full"
+                          >
+                            <span class="truncate">Shopping</span>
+                          </button>
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-480 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          -$120.00
+                        </td>
+                      </tr>
+                      <tr class="border-t border-t-[#dbe0e6]">
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-120 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          2023-08-13
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-240 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          Salary Deposit
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-360 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal"
+                        >
+                          <button
+                            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f0f2f5] text-[#111418] text-sm font-medium leading-normal w-full"
+                          >
+                            <span class="truncate">Income</span>
+                          </button>
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-480 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          +$3,000.00
+                        </td>
+                      </tr>
+                      <tr class="border-t border-t-[#dbe0e6]">
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-120 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          2023-08-12
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-240 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          Restaurant
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-360 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal"
+                        >
+                          <button
+                            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f0f2f5] text-[#111418] text-sm font-medium leading-normal w-full"
+                          >
+                            <span class="truncate">Dining</span>
+                          </button>
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-480 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          -$50.00
+                        </td>
+                      </tr>
+                      <tr class="border-t border-t-[#dbe0e6]">
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-120 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          2023-08-11
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-240 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          Gas Station
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-360 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal"
+                        >
+                          <button
+                            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f0f2f5] text-[#111418] text-sm font-medium leading-normal w-full"
+                          >
+                            <span class="truncate">Transportation</span>
+                          </button>
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-480 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          -$40.00
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <style>
+                  @container (max-width:120px) {
+                    .table-d8245873-b324-4994-af7e-be500bcc34ba-column-120 {
+                      display: none;
+                    }
+                  }
+                  @container (max-width:240px) {
+                    .table-d8245873-b324-4994-af7e-be500bcc34ba-column-240 {
+                      display: none;
+                    }
+                  }
+                  @container (max-width:360px) {
+                    .table-d8245873-b324-4994-af7e-be500bcc34ba-column-360 {
+                      display: none;
+                    }
+                  }
+                  @container (max-width:480px) {
+                    .table-d8245873-b324-4994-af7e-be500bcc34ba-column-480 {
+                      display: none;
+                    }
+                  }
+                </style>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Budget Page -->
+    <div id="budget" class="spa-page">
+      <div
+        class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden"
+        style="font-family: Inter, 'Noto Sans', sans-serif"
+      >
+        <div class="layout-container flex h-full grow flex-col">
+          <header
+            class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f5] px-10 py-3"
+          >
+            <div class="flex items-center gap-4 text-[#111418]">
+              <div class="size-4">
+                <svg
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 6H42L36 24L42 42H6L12 24L6 6Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
+              <h2
+                class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]"
+              >
+                FinWise
+              </h2>
+            </div>
+            <div class="flex flex-1 justify-end gap-8">
+              <div class="flex items-center gap-9">
+                <a
+                  class="text-[#111418] text-sm font-medium leading-normal"
+                  href="dashboard.html"
+                  >Dashboard</a
+                >
+                <a
+                  class="text-[#111418] text-sm font-medium leading-normal"
+                  href="transactions.html"
+                  >Transactions</a
+                >
+                <a
+                  class="text-[#111418] text-sm font-medium leading-normal"
+                  href="budget.html"
+                  >Budget</a
+                >
+                <a
+                  class="text-[#111418] text-sm font-medium leading-normal"
+                  href="#"
+                  >Goals</a
+                >
+                <a
+                  class="text-[#111418] text-sm font-medium leading-normal"
+                  href="#"
+                  >Investments</a
+                >
+              </div>
+              <button
+                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#f0f2f5] text-[#111418] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+              >
+                <div
+                  class="text-[#111418]"
+                  data-icon="Bell"
+                  data-size="20px"
+                  data-weight="regular"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20px"
+                    height="20px"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"
+                    ></path>
+                  </svg>
+                </div>
+              </button>
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDsEm26e2y5-54M5RnXo__ZH-KfY_IiSk_NtZ90Ht58AhRlZJrM90hsEaKXZKU7G7c6kcBWtmBb2mx5zVIJHn5CotCm4BqAm2FArmUnZtrO33GgRFq6XcL5D5u-69UwNKl46K51vpI2JM2Ael6q5zu8zHhivXfL8lOp4oajfZfoI6DZP1eBP_psAHtOMiB7dKB-LxApWE2PBTaH-LjsaXyx88G4NfkhD3LU4caw32XdJFD9Fl7Z6ROV7LkDSDiTwxxWq7ldo1gcpPA');
+                "
+              ></div>
+            </div>
+          </header>
+          <div class="px-40 flex flex-1 justify-center py-5">
+            <div
+              class="layout-content-container flex flex-col max-w-[960px] flex-1"
+            >
+              <div class="flex flex-wrap justify-between gap-3 p-4">
+                <p
+                  class="text-[#111418] tracking-light text-[32px] font-bold leading-tight min-w-72"
+                >
+                  Budget Planner
+                </p>
+              </div>
+              <h2
+                class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5"
+              >
+                Your Budget
+              </h2>
+              <div class="px-4 py-3 @container">
+                <div
+                  class="flex overflow-hidden rounded-lg border border-[#dbe0e6] bg-white"
+                >
+                  <table class="flex-1">
+                    <thead>
+                      <tr class="bg-white">
+                        <th
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-120 px-4 py-3 text-left text-[#111418] w-[400px] text-sm font-medium leading-normal"
+                        >
+                          Category
+                        </th>
+                        <th
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-240 px-4 py-3 text-left text-[#111418] w-[400px] text-sm font-medium leading-normal"
+                        >
+                          Budgeted Amount
+                        </th>
+                        <th
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-360 px-4 py-3 text-left text-[#111418] w-60 text-sm font-medium leading-normal"
+                        >
+                          Actual Amount
+                        </th>
+                        <th
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-480 px-4 py-3 text-left text-[#111418] w-[400px] text-sm font-medium leading-normal"
+                        >
+                          Difference
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="border-t border-t-[#dbe0e6]">
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-120 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          Groceries
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-240 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          $300.00
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-360 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal"
+                        >
+                          $250.00
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-480 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          $50.00
+                        </td>
+                      </tr>
+                      <tr class="border-t border-t-[#dbe0e6]">
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-120 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          Utilities
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-240 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          $150.00
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-360 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal"
+                        >
+                          $100.00
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-480 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          $50.00
+                        </td>
+                      </tr>
+                      <tr class="border-t border-t-[#dbe0e6]">
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-120 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          Transportation
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-240 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          $100.00
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-360 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal"
+                        >
+                          $80.00
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-480 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          $20.00
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <style>
+                  @container (max-width:120px) {
+                    .table-d8245873-b324-4994-af7e-be500bcc34ba-column-120 {
+                      display: none;
+                    }
+                  }
+                  @container (max-width:240px) {
+                    .table-d8245873-b324-4994-af7e-be500bcc34ba-column-240 {
+                      display: none;
+                    }
+                  }
+                  @container (max-width:360px) {
+                    .table-d8245873-b324-4994-af7e-be500bcc34ba-column-360 {
+                      display: none;
+                    }
+                  }
+                  @container (max-width:480px) {
+                    .table-d8245873-b324-4994-af7e-be500bcc34ba-column-480 {
+                      display: none;
+                    }
+                  }
+                </style>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Profile Page -->
+    <div id="profile" class="spa-page">
+      <div
+        class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden"
+        style="font-family: Inter, 'Noto Sans', sans-serif"
+      >
+        <div class="layout-container flex h-full grow flex-col">
+          <header
+            class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f5] px-10 py-3"
+          >
+            <div class="flex items-center gap-4 text-[#111418]">
+              <div class="size-4">
+                <svg
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 6H42L36 24L42 42H6L12 24L6 6Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
+              <h2
+                class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]"
+              >
+                FinWise
+              </h2>
+            </div>
+            <div class="flex flex-1 justify-end gap-8">
+              <div class="flex items-center gap-9">
+                <a
+                  class="text-[#111418] text-sm font-medium leading-normal"
+                  href="dashboard.html"
+                  >Dashboard</a
+                >
+                <a
+                  class="text-[#111418] text-sm font-medium leading-normal"
+                  href="transactions.html"
+                  >Transactions</a
+                >
+                <a
+                  class="text-[#111418] text-sm font-medium leading-normal"
+                  href="budget.html"
+                  >Budget</a
+                >
+                <a
+                  class="text-[#111418] text-sm font-medium leading-normal"
+                  href="#"
+                  >Goals</a
+                >
+                <a
+                  class="text-[#111418] text-sm font-medium leading-normal"
+                  href="#"
+                  >Investments</a
+                >
+              </div>
+              <button
+                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#f0f2f5] text-[#111418] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+              >
+                <div
+                  class="text-[#111418]"
+                  data-icon="Bell"
+                  data-size="20px"
+                  data-weight="regular"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20px"
+                    height="20px"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"
+                    ></path>
+                  </svg>
+                </div>
+              </button>
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDsEm26e2y5-54M5RnXo__ZH-KfY_IiSk_NtZ90Ht58AhRlZJrM90hsEaKXZKU7G7c6kcBWtmBb2mx5zVIJHn5CotCm4BqAm2FArmUnZtrO33GgRFq6XcL5D5u-69UwNKl46K51vpI2JM2Ael6q5zu8zHhivXfL8lOp4oajfZfoI6DZP1eBP_psAHtOMiB7dKB-LxApWE2PBTaH-LjsaXyx88G4NfkhD3LU4caw32XdJFD9Fl7Z6ROV7LkDSDiTwxxWq7ldo1gcpPA');
+                "
+              ></div>
+            </div>
+          </header>
+          <div class="px-40 flex flex-1 justify-center py-5">
+            <div
+              class="layout-content-container flex flex-col max-w-[960px] flex-1"
+            >
+              <div class="flex flex-wrap justify-between gap-3 p-4">
+                <p
+                  class="text-[#111418] tracking-light text-[32px] font-bold leading-tight min-w-72"
+                >
+                  Profile
+                </p>
+              </div>
+              <h2
+                class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5"
+              >
+                Personal Information
+              </h2>
+              <div class="px-4 py-3 @container">
+                <div
+                  class="flex overflow-hidden rounded-lg border border-[#dbe0e6] bg-white"
+                >
+                  <table class="flex-1">
+                    <tbody>
+                      <tr class="border-t border-t-[#dbe0e6]">
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-120 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          Name
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-240 h-[72px] px-4 py-2 w-[400px] text-[#111418] text-sm font-medium leading-normal"
+                        >
+                          Sarah Connor
+                        </td>
+                      </tr>
+                      <tr class="border-t border-t-[#dbe0e6]">
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-120 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          Email
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-240 h-[72px] px-4 py-2 w-[400px] text-[#111418] text-sm font-medium leading-normal"
+                        >
+                          sarah.connor@example.com
+                        </td>
+                      </tr>
+                      <tr class="border-t border-t-[#dbe0e6]">
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-120 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                        >
+                          Phone
+                        </td>
+                        <td
+                          class="table-d8245873-b324-4994-af7e-be500bcc34ba-column-240 h-[72px] px-4 py-2 w-[400px] text-[#111418] text-sm font-medium leading-normal"
+                        >
+                          (123) 456-7890
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <style>
+                  @container (max-width:120px) {
+                    .table-d8245873-b324-4994-af7e-be500bcc34ba-column-120 {
+                      display: none;
+                    }
+                  }
+                  @container (max-width:240px) {
+                    .table-d8245873-b324-4994-af7e-be500bcc34ba-column-240 {
+                      display: none;
+                    }
+                  }
+                  @container (max-width:360px) {
+                    .table-d8245873-b324-4994-af7e-be500bcc34ba-column-360 {
+                      display: none;
+                    }
+                  }
+                  @container (max-width:480px) {
+                    .table-d8245873-b324-4994-af7e-be500bcc34ba-column-480 {
+                      display: none;
+                    }
+                  }
+                </style>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // SPA navigation logic
+      document.querySelectorAll('.spa-nav').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          // Hide all pages
+          document.querySelectorAll('.spa-page').forEach(page => page.classList.remove('active'));
+          // Show selected page
+          const pageId = this.getAttribute('data-page');
+          document.getElementById(pageId).classList.add('active');
+        });
+      });
+    </script>
+  </body>
+</html>
